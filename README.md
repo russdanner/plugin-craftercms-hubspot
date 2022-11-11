@@ -11,4 +11,4 @@ You will need the following information:
 # Generating API Keys for Hubspot
 
 1. Go to the following URL to generate a Hubspot Private App Token 
-https://app.hubspot.com/private-apps/{YOUR HUB ID}
+https://app.hubspot.com/private-apps/{YOUR_HUB_ID}
