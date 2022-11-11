@@ -7,14 +7,14 @@ descriptorVersion: 2
 plugin:
   type: site
   id: org.rd.plugin.hubspot
-  name: Hubspot Plugin
+  name: Hubspot Marketing Automation Plugin
   tags:
     - marketing automation
     - hubspot
   version:
     major: 1
     minor: 0
-    patch: 0
+    patch: 1
   description: A plugin to provide a Hubspot-based marketing automation
   documentation: "https://raw.githubusercontent.com/russdanner/plugin-crafterms-hubspot/master/README.md"
   website:
