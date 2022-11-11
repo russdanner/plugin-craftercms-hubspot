@@ -74,11 +74,11 @@ function handlePreviewRequest(sandboxItem, { siteId, contentId, authoringBase, s
   }
 }
 
-function TrelloAppPage(props) {
+function HubspotAppPage(props) {
   return (
     <div style={{ textAlign: 'center', margin: '50px auto' }}>
       <img src="/studio/static-assets/images/content_creation.svg" />
-      <h1>CrafterCMS ❤ Trello</h1>
+      <h1>CrafterCMS ❤ Hubspot</h1>
       <h3>{props.message}</h3>
     </div>
   );
@@ -86,7 +86,7 @@ function TrelloAppPage(props) {
 
 function Preview(props) {
   // example url:
-  // <STUDIO_SERVE>/studio/plugin?site=t5&type=apps&pluginId=org.rd.plugin.trellowf&name=trellowf&file=cb2.js#/preview?contentId=/site/website/crafter-level-descriptor.level.xml
+  // <STUDIO_SERVE>/studio/plugin?site=t5&type=apps&pluginId=org.rd.plugin.hubspot&name=hubspot&file=cb2.js#/preview?contentId=/site/website/crafter-level-descriptor.level.xml
   const {
     match: { params },
     location: { search }
@@ -118,13 +118,13 @@ function Preview(props) {
     }, [siteId, contentId, authoringBase, setStatusMessage, dispatch]);
   }
 
-  return <TrelloAppPage message={statusMessage} />;
+  return <HubspotAppPage message={statusMessage} />;
 }
 
 function Index() {
   return (
     <>
-      <TrelloAppPage message="OOPS! We don't recognize your request" />
+      <HubspotAppPage message="OOPS! We don't recognize your request" />
     </>
   );
 }
