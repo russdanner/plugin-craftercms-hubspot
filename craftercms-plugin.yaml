@@ -1,0 +1,78 @@
+# This file describes a plugin for use in CrafterCMS
+
+# The version of the format for this file
+descriptorVersion: 2
+
+# Describe the plugin
+plugin:
+  type: site
+  id: org.rd.plugin.hubspot
+  name: Hubspot Plugin
+  tags:
+    - marketing automation
+    - hubspot
+  version:
+    major: 1
+    minor: 0
+    patch: 0
+  description: A plugin to provide a Hubspot-based marketing automation
+  documentation: "https://raw.githubusercontent.com/russdanner/plugin-crafterms-hubspot/master/README.md"
+  website:
+    name: Hubspot Marketing Automation Plugin
+    url: https://github.com/russdanner/plugin-craftercms-hubspot
+  media:
+    screenshots:
+      - title: CrafterCMS
+        description: CrafterCMS Plugin for Hubspot
+        url: "https://raw.githubusercontent.com/russdanner/plugin-craftercms-hubspot/master/.crafter/logo.png"
+  developer:
+    company:
+      name: Russ Danner
+      email: russdanner@craftercms.com
+      url: https://github.com/russdanner
+  build:
+    id: cafebabe313007010481d6ba87901d0b02716c9
+    date: 2022-11-07T00:00:00Z
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+  crafterCmsVersions:
+    - major: 4
+      minor: 0
+      patch: 0
+    - major: 4
+      minor: 0
+      patch: 1
+    - major: 4
+      minor: 0
+      patch: 2
+    - major: 4
+      minor: 0
+      patch: 3
+  crafterCmsEditions:
+    - community
+    - enterprise
+  parameters:
+    - label: Hubspot Private App Token
+      name: hubspotPrivateAppToken
+      description: Priave App Access Token for Hubspot
+  installation:
+   - type: form-datasource
+     elementXpath: //datasource/plugin[pluginId='org.rd.plugin.hubspot']
+     element:
+       name: datasource
+       children:
+         - name: plugin
+           children:
+             - name: pluginId
+               value: org.rd.plugin.hubspot
+             - name: type
+               value: datasource
+             - name: name
+               value: hubspot-forms
+             - name: filename
+               value: main.js
+         - name: icon
+           children:
+             - name: class
+               value: fa-pencil-square-o
