@@ -64,7 +64,7 @@
 					<iceId></iceId>
 					<title>Internal Name</title>
 					<description></description>
-					<defaultValue></defaultValue>
+					<defaultValue>Hubspot Form</defaultValue>
 					<help></help>
 					<properties>
 						<property>
@@ -76,6 +76,21 @@
 							<name>maxlength</name>
 							<value>50</value>
 							<type>int</type>
+						</property>
+						<property>
+							<name>readonly</name>
+							<value></value>
+							<type>boolean</type>
+						</property>
+						<property>
+							<name>tokenize</name>
+							<value>false</value>
+							<type>boolean</type>
+						</property>
+						<property>
+							<name>escapeContent</name>
+							<value>false</value>
+							<type>boolean</type>
 						</property>
 					</properties>
 					<constraints>
@@ -87,151 +102,54 @@
 					</constraints>
 				</field>
 				<field>
-					<type>input</type>
-					<id>formId_s</id>
+					<type>dropdown</type>
+					<id>hubspotForm_s</id>
 					<iceId></iceId>
-					<title>Form ID</title>
+					<title>Hubspot Form</title>
 					<description></description>
 					<defaultValue></defaultValue>
 					<help></help>
 					<properties>
 						<property>
-							<name>size</name>
-							<value>50</value>
-							<type>int</type>
+							<name>datasource</name>
+							<value>forms</value>
+							<type>datasource:item</type>
 						</property>
 						<property>
-							<name>maxlength</name>
-							<value>50</value>
-							<type>int</type>
+							<name>emptyvalue</name>
+							<value></value>
+							<type>boolean</type>
 						</property>
 						<property>
 							<name>readonly</name>
 							<value></value>
 							<type>boolean</type>
 						</property>
-						<property>
-							<name>tokenize</name>
-							<value>false</value>
-							<type>boolean</type>
-						</property>
-						<property>
-							<name>escapeContent</name>
-							<value>false</value>
-							<type>boolean</type>
-						</property>
 					</properties>
 					<constraints>
 						<constraint>
 							<name>required</name>
-							<value><![CDATA[]]></value>
+							<value><![CDATA[false]]></value>
 							<type>boolean</type>
-						</constraint>
-						<constraint>
-							<name>pattern</name>
-							<value><![CDATA[]]></value>
-							<type>string</type>
-						</constraint>
-					</constraints>
-				</field>
-				<field>
-					<type>input</type>
-					<id>portalId_s</id>
-					<iceId></iceId>
-					<title>PortalId</title>
-					<description></description>
-					<defaultValue></defaultValue>
-					<help></help>
-					<properties>
-						<property>
-							<name>size</name>
-							<value>50</value>
-							<type>int</type>
-						</property>
-						<property>
-							<name>maxlength</name>
-							<value>50</value>
-							<type>int</type>
-						</property>
-						<property>
-							<name>readonly</name>
-							<value></value>
-							<type>boolean</type>
-						</property>
-						<property>
-							<name>tokenize</name>
-							<value>false</value>
-							<type>boolean</type>
-						</property>
-						<property>
-							<name>escapeContent</name>
-							<value>false</value>
-							<type>boolean</type>
-						</property>
-					</properties>
-					<constraints>
-						<constraint>
-							<name>required</name>
-							<value><![CDATA[]]></value>
-							<type>boolean</type>
-						</constraint>
-						<constraint>
-							<name>pattern</name>
-							<value><![CDATA[]]></value>
-							<type>string</type>
-						</constraint>
-					</constraints>
-				</field>
-				<field>
-					<type>input</type>
-					<id>region_s</id>
-					<iceId></iceId>
-					<title>Region</title>
-					<description></description>
-					<defaultValue></defaultValue>
-					<help></help>
-					<properties>
-						<property>
-							<name>size</name>
-							<value>50</value>
-							<type>int</type>
-						</property>
-						<property>
-							<name>maxlength</name>
-							<value>50</value>
-							<type>int</type>
-						</property>
-						<property>
-							<name>readonly</name>
-							<value></value>
-							<type>boolean</type>
-						</property>
-						<property>
-							<name>tokenize</name>
-							<value>false</value>
-							<type>boolean</type>
-						</property>
-						<property>
-							<name>escapeContent</name>
-							<value>false</value>
-							<type>boolean</type>
-						</property>
-					</properties>
-					<constraints>
-						<constraint>
-							<name>required</name>
-							<value><![CDATA[]]></value>
-							<type>boolean</type>
-						</constraint>
-						<constraint>
-							<name>pattern</name>
-							<value><![CDATA[]]></value>
-							<type>string</type>
 						</constraint>
 					</constraints>
 				</field>
 			</fields>
 		</section>
 	</sections>
-	<datasources>	</datasources>
+	<datasources>				<datasource>
+					<type>hubspot-forms</type>
+					<id>forms</id>
+					<title>Forms</title>
+					<interface>item</interface>
+					<plugin>
+						<type>datasource</type>
+						<name>hubspot-forms</name>
+						<filename>main.js</filename>
+						<pluginId>org.rd.plugin.hubspot</pluginId>
+					</plugin>
+					<properties>
+					</properties>
+				</datasource>
+	</datasources>
 </form>

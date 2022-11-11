@@ -40,8 +40,8 @@ CStudioForms.Datasources.HubspotForms = CStudioForms.Datasources.HubspotForms ||
             failure: function() {
             }
         };
-        
-        CrafterCMSNext.util.ajax.get("/studio/api/2/plugin/script/plugins/org/rd/plugin/hubspot/hubspot/forms/list?siteId=t7").subscribe(
+
+        CrafterCMSNext.util.ajax.get("/studio/api/2/plugin/script/plugins/org/rd/plugin/hubspot/hubspot/forms/list?siteId="+CStudioAuthoringContext.site).subscribe(
           function (response) {
             callback.success(response);
           },
