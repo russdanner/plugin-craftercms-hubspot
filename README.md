@@ -37,6 +37,6 @@ Modify the deployer groovy sandbox rules or disable them: `DEPLOYER_HOME/config/
         titleField: "title_t"
         exerptField: "blogPostExcerpt_html"
         photoField: "blogPostImage_s"
-        repoBasePath: "/Users/rdanner/Desktop/demo-craftercms/data/repos/sites/sharefile/sandbox"
-        siteId: "siteId"
+        repoBasePath: "/Users/rdanner/Desktop/demo-craftercms/data/repos/sites/mysite/sandbox"
+        siteId: "mysite"
 ```
