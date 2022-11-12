@@ -1,6 +1,7 @@
 # Hubspot Marketing Automation for CrafterCMS
 
 - Embed Hubpot Forms
+- Publish to social channels (Facebook, Twitter, etc) via Hubspot Social
 
 # Installation
 
@@ -16,7 +17,7 @@ https://app.hubspot.com/private-apps/{YOUR_HUB_ID}
 # Publish to Hubpspot Social
 This is an ptional publisher extension to publish to social channels via Hubspot
 
-## deployer application
+## CrafterCMS deployer application
 Modify the deployer groovy sandbox rules or disable them: `DEPLOYER_HOME/config/application.yaml`
 ```
     scripting:
