@@ -14,7 +14,7 @@ plugin:
   version:
     major: 1
     minor: 0
-    patch: 1
+    patch: 2
   description: A plugin to provide a Hubspot-based marketing automation
   documentation: "https://raw.githubusercontent.com/russdanner/plugin-crafterms-hubspot/master/README.md"
   website:
@@ -76,3 +76,22 @@ plugin:
            children:
              - name: class
                value: fa-pencil-square-o
+   - type: form-datasource
+     elementXpath: //datasource/plugin[pluginId='org.rd.plugin.hubspot']
+     element:
+       name: datasource
+       children:
+         - name: plugin
+           children:
+             - name: pluginId
+               value: org.rd.plugin.hubspot
+             - name: type
+               value: datasource
+             - name: name
+               value: hubspot-socialchannels
+             - name: filename
+               value: main.js
+         - name: icon
+           children:
+             - name: class
+               value: fa-pencil-square-o               
