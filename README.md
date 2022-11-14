@@ -28,6 +28,9 @@ Modify the deployer groovy sandbox rules or disable them: `DEPLOYER_HOME/config/
 ## Move the script processor to the deployer
 `DEPLOYER_HOME/processors/scripts`
 
+## Create a JWT Token in Crafter Studio
+Log in to Crafter Studio and use the token management screen to generate a JWT token
+
 ## Configure the processor in your target
 ```
       - processorName: scriptProcessor
